@@ -393,8 +393,8 @@ form .submit:hover {
 
 @media (orientation: landscape) {
   .hamburger {
-    top: 5vh;
-    right: 5vh;
+    top: 5vw;
+    right: 5vw;
   }
 
   .reddot {
