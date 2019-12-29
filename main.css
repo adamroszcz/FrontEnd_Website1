@@ -1,0 +1,689 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.row {
+  margin: 0;
+}
+
+/* SCROLL !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+html {
+  scroll-behavior: smooth;
+}
+
+.nonenav {
+  display: none;
+}
+
+body {
+  background-color: #444;
+}
+
+.hamburger {
+  position: fixed;
+  top: 5vw;
+  right: 10vw;
+  transform: translateY(-50%, -50%);
+  z-index: 2;
+  /* transition: all 5s; */
+}
+
+.line {
+  width: 25px;
+  height: 5px;
+  margin-top: 5px;
+  background-color: white;
+}
+
+nav {
+  
+  width: 100vw;
+  min-height: 10vh;
+  position: relative;
+}
+
+nav ul {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: rgb(245, 138, 16);
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  clip-path: circle(150px at 100% -5%);
+  -webkit-clip-path: circle(150px at 90% -10%);
+  transition: all 0.5s ease-in-out;
+}
+
+nav ul.open {
+  clip-path: circle(1000px at 100% -5%);
+  -webkit-clip-path: circle(1000px at 90% -10%);
+}
+
+nav ul li {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  border: solid 3px white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+nav ul li:nth-child(1) {
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+nav ul li:nth-child(2) {
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0.25s;
+}
+
+nav ul li:nth-child(3) {
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0.4s;
+}
+
+nav ul li.show {
+  opacity: 1;
+}
+
+/* SECTION              */
+.firstSection {
+  background-image: url("./img1\ xxs.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  /* background-color: rgb(255, 250, 245); */
+}
+
+.hello {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.hello span {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.hello button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: rgb(245, 138, 16);
+  border: solid 4px rgb(27, 15, 2);
+  border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+.surname {
+  color: rgb(245, 138, 16);
+}
+
+.reddiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(172, 44, 44);
+  min-height: 30vh;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 20px 30px;
+}
+
+.reddiv span:nth-last-child(2) {
+  padding-bottom: 20px;
+}
+
+.reddiv span:nth-last-child(1) {
+  font-weight: lighter;
+}
+
+/* SECOND SECTION !!!!!!!!!!! */
+.secondSection {
+  padding-top: 40px;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #ddd;
+}
+
+.ColumndWidthDot {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 20px 10px;
+  flex-basis: 100%;
+  align-items: center;
+}
+
+.reddots {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  /* justify-content: center; */
+}
+
+.reddot {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  border: 1px solid rgb(172, 44, 44);
+  background-color: rgb(172, 44, 44);
+  text-align: center;
+  font-size: 30px;
+  line-height: 30vw;
+  color: white;
+}
+
+.reddot ~ div {
+  font-family: "Ubuntu", sans-serif;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 0 40px 0;
+}
+
+.reddot + div {
+  font-size: 25px;
+  padding: 15px 0;
+}
+
+/* o mnie sekcja ze zdjęciem */
+.whoami {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.myphoto {
+  position: relative;
+  height: 30vw;
+}
+
+.myphoto img {
+  width: 30vw;
+  height: 30vw;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.textaboutme span {
+  font-weight: 500;
+  font-size: 25px;
+  font-family: "Ubuntu", sans-serif;
+  display: block;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.textaboutme span + span {
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.textaboutme div ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(172, 44, 44);
+}
+
+.textaboutme div ul li {
+  padding: 5px 0px;
+  margin: 0 15px;
+}
+
+/* Pportfolio!!!!!!!!!!! */
+.portfolioSection {
+  text-align: center;
+  background-color: rgb(172, 44, 44);
+  color: white;
+}
+
+.portfolioSection h1 {
+  padding: 30px 0;
+  font-size: 40px;
+}
+
+.portfolioSection span {
+  padding: 0 0 30px 0;
+  display: block;
+  font-size: 20px;
+  background-color: rgb(172, 44, 44);
+}
+
+.PortfolioBox {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  background-color: #fff;
+}
+
+.PortfolioBox span {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.miniaturka {
+  width: 50vw;
+  height: 50vw;
+  background-image: url("./soon.png");
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  background-size: cover;
+}
+
+/* Footer */
+.contact {
+  min-height: 20vh;
+  background-color: rgb(172, 44, 44);
+}
+
+.contact-form {
+  margin: 0 auto;
+  height: ;
+}
+
+form input:nth-child(1) {
+  margin-top: 30px;
+}
+
+form input:nth-last-child(1) {
+  margin-bottom: 30px;
+}
+
+.form-control {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+form .submit {
+  background-color: black;
+  border-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+br {
+  display: block;
+  margin: 10px 0;
+}
+
+form .submit:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+.contact-title {
+  width: 100vw;
+}
+
+.contactdata {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: 30px auto;
+  height: 274px;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.contactdata div {
+  /* background-color: grey; */
+  text-align: center;
+}
+
+@media (orientation: landscape) {
+  .hamburger {
+    top: 5vh;
+    right: 5vh;
+  }
+
+  .reddot {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    border: 1px solid rgb(172, 44, 44);
+    background-color: rgb(172, 44, 44);
+    text-align: center;
+    font-size: 30px;
+    line-height: 30vh;
+    color: white;
+  }
+}
+
+@media (min-width: 400px) {
+  .hello span {
+    font-size: 30px;
+  }
+
+  a {
+    font-size: 25px;
+  }
+
+  nav ul.open {
+    clip-path: circle(1200px at 100% -5%);
+    -webkit-clip-path: circle(1200px at 90% -10%);
+  }
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    width: 100vw;
+    min-height: 10vh;
+    padding-top:20px;
+  }
+
+  nav ul {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: transparent;
+    height: 10vh;
+    /* width: 70%; */
+    /* flex-grow:1; */
+    justify-content: flex-end;
+    align-items: right;
+    margin-left: auto;
+    clip-path: none;
+    -webkit-clip-path: none;
+    padding-top: 30px;\;
+  }
+
+  nav ul li {
+    margin: 30px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    border: solid 3px black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.1s;
+  }
+
+  nav ul li a:hover {
+    color: white;
+    border: solid 3px rgb(245, 138, 16);
+    background-color: rgb(245, 138, 16);
+  }
+
+  nav ul li:nth-child(1) {
+    opacity: 1;
+  }
+
+  nav ul li:nth-child(2) {
+    opacity: 1;
+  }
+
+  nav ul li:nth-child(3) {
+    opacity: 1;
+  }
+
+  .firstSection {
+    background-image: url("./img1\ 1280x853.jpg");
+  }
+
+  .reddiv {
+    font-size: 27px;
+  }
+
+  /* second setion for desktop */
+  .secondSection {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #ddd;
+  }
+
+  .ColumndWidthDot {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+
+  .reddots {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .reddot {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 1px solid rgb(172, 44, 44);
+    background-color: rgb(172, 44, 44);
+    text-align: center;
+    font-size: 30px;
+    line-height: 20vw;
+    color: white;
+  }
+
+  .reddot ~ div {
+    font-family: "Ubuntu", sans-serif;
+    width: 20vw;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .miniaturka {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  .reddot {
+    font-size: 50px;
+  }
+
+  .reddot ~ div {
+    font-size: 27px;
+    width: 80vw;
+  }
+
+  .reddot + div {
+    font-size: 35px;
+    width: 80vw;
+  }
+
+  .textaboutme span {
+    font-size: 35px;
+  }
+
+  .textaboutme span + span {
+    font-size: 27px;
+  }
+
+  .textaboutme div ul {
+    font-size: 27px;
+  }
+
+  .portfolioSection h3 {
+    font-size: 27px;
+  }
+
+  .reddiv {
+    min-height: 20vh;
+  }
+}
+
+@media (min-width: 800px) {
+  .hello span {
+    font-size: 40px;
+  }
+
+  a {
+    font-size: 35px;
+  }
+
+  nav ul.open {
+    clip-path: circle(1200px at 100% -5%);
+    -webkit-clip-path: circle(1200px at 90% -10%);
+  }
+
+  .hello button {
+    margin-top: 40px;
+  }
+
+  .reddot {
+    font-size: 40px;
+  }
+
+  .reddot ~ div {
+    font-size: 20px;
+    width: 80vw;
+  }
+
+  .reddot + div {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hello span {
+    font-size: 50px;
+  }
+
+  a {
+    font-size: 40px;
+  }
+
+  .hello button {
+    margin-top: 50px;
+  }
+
+  .reddot {
+    font-size: 70px;
+    width: 15vw;
+    height: 15vw;
+    line-height: 15vw;
+  }
+
+  .reddots {
+    flex-direction: row;
+  }
+
+  .ColumndWidthDot {
+    width: 20vw;
+    flex-basis: auto;
+  }
+
+  .reddot ~ div {
+    width: 20vw;
+  }
+
+  .whoami {
+    flex-direction: row;
+    width: 80vw;
+  }
+
+  .myphoto {
+    width: 20vw;
+    height: 20vw;
+    background-image: url(./imgja.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: 40px;
+    margin: 50px;
+  }
+
+  .myphoto img {
+    display: none;
+  }
+
+  .textaboutme {
+    width: 50vw;
+    font-size: 30px;
+  }
+
+  .textaboutme span {
+    font-size: 30px;
+  }
+
+  .PortfolioBox {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .PortfolioBox span {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .miniaturka {
+    width: 20vw;
+    height: 20vw;
+    background-image: url("./soon.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+}
